@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".MainView.fragmentRecyclerMain.RecyclerFragment"
+tools:showIn="@layout/activity_gallery_main">
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rvGall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/textSinItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:padding="30dp"
+        android:text="No se encuentran archivos ..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_overlay"
+    tools:context=".FullScreenPhotoView.FullScreenActivity"
+    >
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/black_overlay">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </android.support.v4.view.ViewPager>
+        <RelativeLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/btn_copy"
+                style="@android:style/Widget.Holo.Button.Borderless"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/edit_48" />
+
+            <Button
+                android:id="@+id/btn_shared"
+                style="@android:style/Widget.Holo.Button.Borderless"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/share_48" />
+
+            <Button
+                android:id="@+id/btn_trush"
+                style="@android:style/Widget.Holo.Button.Borderless"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/trash_48" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>
